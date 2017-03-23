@@ -32,10 +32,20 @@
                 }
             });
         };
+        function exists( author ) {
+          return author ? true : false;
+        }
+        
+        function getAuthor( fn, author ) {
+          return fn( author ) ? "- " + author : "- Anonymous";
+        }
         var _updateDom = function( response ) {
-            $("#new-quote").html( '"' + response.quoteText + '"' );
-            $("#author-quote").html( response.quoteAuthor );
-            _tweetButton.src = _tweetButton.src.replace(/&text=[^&]+/, "&text=" + encodeURIComponent( response.quoteText + " - " + response.quoteAuthor ));
+            $("#new-quote").text( response.quoteText );
+            var authorQuote = getAuthor( exists, response.quoteAuthor );
+            $("#author-quote").text( authorQuote ); 
+            
+           var newTweethref = _tweetButton.getAttribute( "href" ).replace(/&text=[^&]+/, "&text=" + encodeURIComponent( response.quoteText + authorQuote ));
+           _tweetButton.setAttribute( "href", newTweethref );
         };
 
         return {

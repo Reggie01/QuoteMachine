@@ -46,7 +46,7 @@ h2 {
   margin: 8px;
   border: 0 none;
   letter-spacing: 1px;
-  background-color: #ff6e40;
+  background-color: #33ccff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
@@ -59,7 +59,7 @@ h2 {
 
 .btn-primary {
   color: #ffffff;
-  background: #ff6e40;
+  background: #33ccff;
 }
 
 .btn-primary:hover,
@@ -67,14 +67,14 @@ h2 {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  background: #ff3d00;
+  background: #00ace6;
   outline: 0 none;
   box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
 }
 
 .btn-primary:active,
 .btn-primary.active {
-  background: #ff6e40;
+  background: #00ace6;
   box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
 }
 
@@ -87,62 +87,100 @@ h2 {
 .open>.dropdown-toggle.btn-primary.focus,
 .open>.dropdown-toggle.btn-primary:focus,
 .open>.dropdown-toggle.btn-primary:hover {
-  background: #ff6e40;
+  background: #33ccff;
   box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
 }
 /* 3. Quotes
 ----------------------------------------*/
-/* Text shadow css from 
-   https://css-tricks.com/almanac/properties/t/text-shadow/ 
-   More examples are shown in the above link codepen. I used css class labeled glow.
-*/
-
 html, body {
-    height: 100%;
-    min-height: 675px;
+    color: #373737;
 }
 
-.text-shadow {
-  text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc, 1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #eee, 4px 3px 1px #ccc, 3px 4px 1px #eee, 5px 4px 1px #ccc, 4px 5px 1px #eee, 6px 5px 1px #ccc, 5px 6px 1px #eee, 7px 6px 1px #ccc;
+body {
+  height: 100vh;
+  position: relative;
+  border: 1px;
+  border-style: solid;
+  border-color: #ff6340;
+  background-color: #ff6340;
 }
 
-.container {
-  position:relative;
-  height: 100%;
-  background-color: #b2dfdb;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-#quotes {
-  position:relative;
-  top: 10%;
-  padding-bottom: 0;
-  text-align: center; 
-}
-
-#quotes blockquote {
-  margin: 0;
-  border: 0;
+.title {
+  color: white;
 }
 
 .quote {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin-right: -50%;
+  
   max-width: 420px;
   margin: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-  background-color: #fff;
+  color: #fff;
+  transition: all 1s;
+  transform: translate( -50%, -50% );
 }
 
 .quote:active,
 .quote:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, .18), 0 8px 16px rgba(0, 0, 0, .36);
+  border-radius: 6px;
 }
 
 #new-quote {  padding: 16px;  }
 
-#author-quote {
-  padding: 16px;
-  font-style: italic;
+#quote {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
-iframe {  border: 0;  }
+blockquote {
+  position: relative;
+  border-left: 0;
+}
+
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  color: #ffa88d;
+}
+
+cite {
+  position: absolute;
+  right: 0;
+}
+
+cite:after {
+  display: block;
+  content: "\201D";
+  font-size: 80px;
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  color: #ffa88d;
+}
+
+.tweet-button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.tweet {
+  line-height: 35px;
+}
+
+/* 4. Media Queries 
+-------------------------------*/
+ @media ( max-width: 768px ) {
+   body {
+     font-size: 17px;
+     font-size: 1.0625rem;
+   }
+   
+ }
