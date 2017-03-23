@@ -114,7 +114,6 @@ body {
   top:50%;
   left: 50%;
   margin-right: -50%;
-  
   max-width: 420px;
   margin: auto;
   color: #fff;
@@ -141,9 +140,9 @@ blockquote {
   border-left: 0;
 }
 
-blockquote:before {
-  display: block;
-  content: "\201C";
+.quote:before {
+  font-family: Georgia, serif;
+  content: "“";
   font-size: 80px;
   position: absolute;
   left: -20px;
@@ -155,13 +154,13 @@ cite {
   right: 0;
 }
 
-cite:after {
-  display: block;
-  content: "\201D";
+.quote:after {
+  font-family: Georgia, serif;
+  content: "”";
   font-size: 80px;
   position: absolute;
-  right: -20px;
-  bottom: -40px;
+  right: -50px;
+  bottom: -62px;
   color: #ffa88d;
 }
 
