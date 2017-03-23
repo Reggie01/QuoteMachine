@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Zipline: Build a Random Quote Machine This is the second zipline from the basic front end development projects." />
+  <meta name="keywords" content="fcc, zipline, quotes, web-development" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <title>Random Quote Machine</title>
+  <!--[if lte IE 8]>
+	    <link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
+  <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+
+      <h2 class="text-shadow">Random Quotes Rewritten</h2>
+
+
+    <div id="quotes">
+      <p class="text-center">
+        These are some of my favorite quotes that I collected during coding school. I hope you enjoy them.
+      </p>
+      <button class="btn btn-primary" id="quote" type="button">
+        New Quote
+      </button>
+      <div class="quote">
+        <blockquote id="new-quote"></blockquote>
+        <p id="author-quote"></p>
+      </div>
+
+      <iframe id="tweet-button" src="http://platform.twitter.com/widgets/tweet_button.html?via=ReggieSanders7&text=Replace%20Me&count=horizontal" width="140" height="28"></iframe>
+    </div>
+  </div>
+
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>

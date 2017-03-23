@@ -1,0 +1,148 @@
+﻿/* TABLE OF CONTENTS
+
+    1. Basic Document Styles
+    2. Button
+    3. Quotes
+    4. Media Queries
+   
+*/
+/* 1. Basic Document Styles
+-------------------------------------------------*/
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {  font-size: 100%;  }
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-weight: 400;
+  color: rgba(0,0,0,.87);
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+
+h2 {
+  font-size: 56px;
+  font-size: 3.5rem;
+  color: rgba(0,0,0,.54);
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-weight: 400;
+  text-align: center
+}
+
+/* 2. Button
+-------------------------------------------------*/
+
+.btn {
+  min-width: 64px;
+  min-height: 36px;
+  padding: 0 8px;
+  margin: 8px;
+  border: 0 none;
+  letter-spacing: 1px;
+  background-color: #ff6e40;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: 0 none;
+  box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: #ff6e40;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background: #ff3d00;
+  outline: 0 none;
+  box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  background: #ff6e40;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary.focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary:hover {
+  background: #ff6e40;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+/* 3. Quotes
+----------------------------------------*/
+/* Text shadow css from 
+   https://css-tricks.com/almanac/properties/t/text-shadow/ 
+   More examples are shown in the above link codepen. I used css class labeled glow.
+*/
+
+html, body {
+    height: 100%;
+    min-height: 675px;
+}
+
+.text-shadow {
+  text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc, 1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #eee, 4px 3px 1px #ccc, 3px 4px 1px #eee, 5px 4px 1px #ccc, 4px 5px 1px #eee, 6px 5px 1px #ccc, 5px 6px 1px #eee, 7px 6px 1px #ccc;
+}
+
+.container {
+  position:relative;
+  height: 100%;
+  background-color: #b2dfdb;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+#quotes {
+  position:relative;
+  top: 10%;
+  padding-bottom: 0;
+  text-align: center; 
+}
+
+#quotes blockquote {
+  margin: 0;
+  border: 0;
+}
+
+.quote {
+  max-width: 420px;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  background-color: #fff;
+}
+
+.quote:active,
+.quote:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .18), 0 8px 16px rgba(0, 0, 0, .36);
+}
+
+#new-quote {  padding: 16px;  }
+
+#author-quote {
+  padding: 16px;
+  font-style: italic;
+}
+
+iframe {  border: 0;  }
